@@ -127,8 +127,7 @@ body {
   color: #7a6f66;
   font-size: 15px;
 }
-.art-card { opacity: 0; transform: translateY(20px); transition: opacity 0.4s, transform 0.4s; }
-.art-card.show { opacity: 1; transform: translateY(0); }
+
 
 
 footer {
