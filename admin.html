@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin | Artevia</title>
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="gallery.html">Gallery</a>
+      <a href="artists.html">Artist</a>
+    </div>
+
+    <div class="logo"><a href="home.html">Artevia</a></div>
+
+    <div class="nav-right">
+      <a href="curator.html">Curator</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Welcome, Admin 🎨</h2>
+      <p>Manage the gallery, upload artworks, and view visitor feedback here.</p>
+
+      <div class="art-greeting">
+        <input type="text" id="username" placeholder="Enter your name">
+        <select id="mood">
+          <option value="">Select your mood</option>
+          <option value="creative">Creative</option>
+          <option value="inspired">Inspired</option>
+          <option value="curious">Curious</option>
+          <option value="relaxed">Relaxed</option>
+        </select>
+        <button onclick="showArtGreeting()">Show Greeting</button>
+        <p id="greetingMessage"></p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Add Artwork</h3>
+          <form>
+            <input type="text" placeholder="Artwork Title" required>
+            <input type="text" placeholder="Artist Name" required>
+            <input type="file" accept="image/*" id="artupload">
+            <button type="submit">Upload Artwork</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Manage Artists</h3>
+          <p>View, add or remove artists from the collection.</p>
+          <button>Manage Artists</button>
+        </div>
+
+        <div class="card">
+          <h3>Visitor Feedback</h3>
+          <p>Read messages and reviews from gallery visitors.</p>
+          <button>View Feedback</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="admin.js"></script>
+  </main>
+
+  <footer>
+    <p>© 2025 Artevia | <a href="home.html">The Way of Art</a></p>
+  </footer>
+
+</body>
+</html>

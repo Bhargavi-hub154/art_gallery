@@ -1,0 +1,264 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #4F5141;
+  
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 56px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
+  border-bottom: 2px solid #CDC6C3;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 30px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #4F5141;
+  text-align: center;
+  flex: 2;
+}
+
+.nav-left a, .nav-right a, .logo a {
+  color: #4F5141;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.nav-left a:hover, .nav-right a:hover, .logo a:hover {
+  color: #A38F85;
+}
+
+/* ================= SECTION TITLES ================= */
+.artists-section,
+.curators-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  gap: 40px;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.artists-section h1,
+.curators-section h1 {
+  font-size: 60px;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 30px;
+}
+
+/* ================= GRID LAYOUT ================= */
+.artists-grid,
+.curators-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* ================= ARTIST/EXHIBITION CARDS ================= */
+.artist-card {
+  border: 2px solid #CDC6C3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(128,128,0,0.3); /* olive green shadow */
+}
+
+.artist-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(128,128,0,0.5); /* olive green shadow */
+}
+
+.artist-photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.artist-card h2 {
+  font-size: 24px;
+  margin: 15px 15px 8px;
+  font-weight: 500;
+}
+
+.artist-card p {
+  padding: 0 15px 15px;
+  color: #7a6f66;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================= CURATOR CARDS ================= */
+.curator-card {
+  background: rgba(245, 238, 225, 0.75); 
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(128,128,0,0.3); /* olive green shadow */
+  backdrop-filter: blur(6px);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.curator-card h2 {
+  color: #2E2A24;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.curator-card p {
+  color: #3F3A31;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* ================= REGISTER INTEREST BOX ================= */
+.register-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.register-box {
+  background: #ffffff;
+  border: 2px solid #CDC6C3;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(128,128,0,0.3); /* olive green shadow */
+}
+
+.register-box h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #4F5141;
+}
+
+.register-box p {
+  font-size: 15px;
+  color: #7a6f66;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.register-box input {
+  width: 90%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #CDC6C3;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.register-box input:focus {
+  border-color: #A38F85;
+  box-shadow: 0 0 5px rgba(163,143,133,0.5);
+}
+
+.register-box button {
+  background: #A38F85;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-box button:hover {
+  background: #918070;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 25px;
+  color: #555;
+  margin-top: 60px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 40px;
+    margin: 10px 0;
+  }
+
+  .nav-left a, .nav-right a {
+    margin: 8px;
+    display: inline-block;
+  }
+
+  .artists-grid,
+  .curators-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .register-box {
+    padding: 20px;
+  }
+}
+/* Exhibitions Section */
+.artists-grid {
+  display: flex;             /* Flex layout */
+  justify-content: center;   /* Center cards horizontally */
+  gap: 30px;                 /* Space between cards */
+  flex-wrap: wrap;           /* Wrap to next line on smaller screens */
+}
+
+/* Artist Card */
+.artist-card {
+  flex: 0 0 30%;             /* Each card takes ~30% width */
+  min-width: 280px;          /* Prevent cards from getting too small */
+  border: 2px solid #CDC6C3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.artist-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(128, 128, 0, 0.5); /* olive green shadow */
+}
